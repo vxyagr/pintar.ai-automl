@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	//=include includes/head.html
+	<body>
+		//=include includes/navigation.html
+		<div class="cover-container"></div>
+		<div class="page-container">
+			<div class="page-container__inner">
+				<div class="row">
+					<div class="col-md-3 sticky-post">
+						<div class="tool-box">
+							<div class="tool-box__inner">
+								<h2 class="title">Project Name</h2>
+								<div class="edit-data">
+                                    <a href="index.html">EDIT DATA</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-9">
+                        <div class="visual-card">
+                            <h1>Visualization</h1>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="visual-card__item">
+                                        <h2 class="divide">32019</h2>
+                                        <p>item</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="visual-card__item">
+                                        <h2 class="divide">32019</h2>
+                                        <p>item</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="visual-card__item">
+                                        <h2 class="divide">32019</h2>
+                                        <p>item</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="visual-card__item">
+                                        <h4>Chartmode</h4>
+                                        <div id="BarChart"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="visual-card__item">
+                                        <h4>Chartmode</h4>
+                                        <div id="DonutChart"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="visual-card__item">
+                                        <h2 class="divide">32019</h2>
+                                        <div id="PieChart"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <!-- Scripts -->
+	    <script src="assets/js/libs.js"></script>
+        <script src="assets/js/app.js"></script>
+        
+        <script>
+            // Script
+            var chart = bb.generate({
+            data: {
+                columns: [
+                ["data1", 30],
+                ["data2", 120]
+                ],
+                type: "donut",
+                colors: {
+                        data1: "#69e781",
+                        data2: "#0b2239"
+                },
+                onclick: function(d, i) {
+                console.log("onclick", d, i);
+            },
+                onover: function(d, i) {
+                console.log("onover", d, i);
+            },
+                onout: function(d, i) {
+                console.log("onout", d, i);
+            }
+            },
+            donut: {
+                title: "Demo chart"
+            },
+            bindto: "#DonutChart"
+            });
+        </script>
+
+        <script>
+            // Script
+            var chart = bb.generate({
+            data: {
+                columns: [
+                ["data1", 30],
+                ["data2", 120]
+                ],
+                type: "pie",
+                colors: {
+                        data1: "#69e781",
+                        data2: "#0b2239"
+                },
+                onclick: function(d, i) {
+                console.log("onclick", d, i);
+            },
+                onover: function(d, i) {
+                console.log("onover", d, i);
+            },
+                onout: function(d, i) {
+                console.log("onout", d, i);
+            }
+            },
+            bindto: "#PieChart"
+            });
+        </script>
+	</body>
+</html>

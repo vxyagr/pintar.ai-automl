@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	//=include includes/head.html
+	<body style="background: #f5f5f5 !important;">
+
+		<div class="header-box">
+
+		</div>
+
+		<div class="float-side-bar">
+			<a id="float-save"><i class="far fa-save"></i></a>
+			<a id="float-run"><i class="fas fa-play"></i></a>
+		</div>
+
+		<div class="container">
+			<div class="main-container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card-panel">
+							<div class="card-panel--inner">
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2>Input Data</h2>
+									</div>
+									<div class="panel-item--sub" style="display: block">
+										<p id="imprt-db">Import Datasource</p>
+										<p id="imprt-fl">Import File</p>
+										<p id="data-merge">Data Merge</p>
+										<p id="select-col">Select Column</p>
+										<p id="select-row">Select Row</p>
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2>Preprocess</h2>
+									</div>
+									<div class="panel-item--sub">
+										<span class="sub-title">Feature Transformer</span>
+										<p id="bucketizer">Bucketizer</p>
+										<p id="normalizer">Normalizer</p>
+										<p id="onehot">OneHotEncoder</p>
+										<p id="pca">PCA</p>
+										<span class="sub-title">Other</span>
+										<p id="labeling">labeling</p>
+										<p id="minmax">MinMax</p>
+										<p id="missingval">Missing Value</p>
+										<p id="standardscaler">Standard Scaler</p>
+										<p id="stopword">StopwordRemover</p>
+										<p id="tokenizer">Tokenizer</p>
+										<p id="vectorassembler">Vector Assembler</p>
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2>Modeling</h2>
+									</div>
+									<div class="panel-item--sub">
+										<span class="sub-title">Forecasting</span>
+										<p id="linear-reg">Linear Regression</p>
+										<p id="normalizer">ARIMA</p>
+										<span class="sub-title">Unsupervised Learning</span>
+										<p id="kmeans">KMeans</p>
+										<p id="gmm">Gaussian Mixture Model</p>
+										<span class="sub-title">Supervised Learning</span>
+										<p id="logisticreg">Logistic Regression</p>
+										<p id="decisiontree">Decision Tree</p>
+										<p id="randomforest">Random Forest</p>
+										<p id="naivebayes">Naive Bayes</p>
+										<span class="sub-title">SVM</span>
+										<p id="fpgrowth">FP Growth</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="canvas-flow">
+							<div class="canvas-flow--inner">
+								<div class="canvas-title">
+									<h3>Untitled Flow</h3>
+									<span>last save 32 minute ago</span>
+								</div>
+								<div id="canvas-template">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	    <!-- Scripts -->
+	    <script src="assets/js/libs.js"></script>
+		<script src="assets/js/app.js"></script>
+		
+		
+		<script>
+			//SAVE CLICK FUNCTION
+			$("#float-save").click(function(){
+				var
+				file = $('input[type=file]');
+				file.attr('value', file.val());
+				alert( $('#canvas-template').html() );
+				return false;
+			});
+
+			//input 
+            $(document).on('keyup', '.inpt-grp input', function(e) {
+                var thisInput = $(this).val();
+                $(this).attr('value', thisInput)
+            });
+            $(".inpt-grp input").keyup();
+            //
+
+            //select
+            $(document).on('change', '.inpt-grp select', function(e) {
+                $(this).find(':selected').attr('selected', 'selected');
+            });
+            $(".inpt-grp input").change();
+            //
+
+            //checkbox
+            $(document).on('click', '.checkbox-layout-inline input[type=checkbox]', function(e) {
+                if($(this).is(":checked")) {
+                    $(this).attr('checked','checked');
+                }
+            });
+            $(".checkbox-layout-inline input[type=checkbox]").click();
+			//
+			
+		</script>
+	</body>
+</html>

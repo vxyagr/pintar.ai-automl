@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>Datalabs</title>
+		<meta name="description" content="Description">
+		<meta name="keywords" content="social content network, social network">
+		<meta name="robots" content="index">
+		<meta name="author" content="Author">
+		<meta name="designer" content="Designer">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	
+		<!-- Facebook -->
+		<meta property="og:title" content="Title">
+		<meta property="og:site_name" content="Site Name">
+		<meta property="og:description" content="Description">
+		<meta property="og:url" content="/_url">
+		<meta property="og:image" content="assets/images/img-to-share.jpg">
+		<meta property="og:type" content="website">
+	
+		<!-- Google+ -->
+		<meta itemprop="name" content="Name">
+		<meta itemprop="description" content="Description">
+		<meta itemprop="image" content="assets/images/img-to-share.jpg">
+	
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Title">
+		<meta name="twitter:description" content="Description">
+		<meta name="twitter:site" content="@twitteraccount">
+		<meta name="twitter:creator" content="@qubicle_id">
+		<meta name="twitter:url" content="/_url">
+		<meta name="twitter:image" content="assets/images/img-to-share.jpg">
+	
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assets/images/favicons/apple-touch-icon-57x57.png") }}' sizes="57x57">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assets/images/favicons/apple-touch-icon-60x60.png") }}' sizes="60x60">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assets/images/favicons/apple-touch-icon-72x72.png") }}' sizes="72x72">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assets/images/favicons/apple-touch-icon-76x76.png") }}' sizes="76x76">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assets/images/favicons/apple-touch-icon-114x114.png") }}' sizes="114x114">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="assets/images/favicons/favicon-16x16.png") }}' sizes="16x16">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="assets/images/favicons/favicon-32x32.png") }}' sizes="32x32">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="assets/images/favicons/favicon-96x96.png") }}' sizes="96x96">
+		<link rel="shortcut icon" type="image/ico" href='{{ url_for("static", filename="assets/images/favicons/favicon.ico") }}'>
+		<link rel="manifest" href='{{ url_for("static", filename="assets/images/favicons/manifest.json") }}'>
+		<meta name="theme-color" content="#fafafa">
+	
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href='{{ url_for("static", filename="assets/css/style.css") }}'>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		
+		<!-- Project Content -->
+		<meta id="projectname" data-projectname='{{ response["result"]["description"]["name"] }}'>
+		<meta id="projectdescription" data-projectdescription='{{ response["result"]["description"]["description"] }}'>
+		<meta id="sessionname" data-sessionname='{{ session["session_name"] }}'>
+		<meta id="projectfile" data-projectfile='{{ response["result"]["description"]["file"] }}'>
+		<meta id="livyid" data-livyid='{{ response["result"]["description"]["livy_id"] }}'>
+		<meta id="numofcore" data-numofcore='{{ response["result"]["description"]["num_of_core"] }}'>
+		<meta id="numofmem" data-numofmem='{{ response["result"]["description"]["num_of_mem"] }}'>
+		<meta id="isnew" data-isnew='{{ response["result"]["description"]["isnew"] }}'>
+	</head>
+	
+	
+	<body style="background: #f5f5f5" oncontextmenu="return false;">
+		<div class="loading-process-page">
+			<div class="loading-process-page__inner">
+				<img src="{{ url_for('static', filename='assets/img/loading.gif') }}">
+			</div>
+		</div>
+		<div class="navbar-app float-navbar">
+			<div class="navbar-app__inner">
+				<!-- <a onclick="back()"><i class="fas fa-angle-left"></i></a> -->
+				<a href="/main"><i class="fas fa-angle-left"></i></a>
+				<h3>Datalabs <span>{{ session["user_id"]}}</span></h3>
+				<h4 class="projet-info">{{ response["result"]["description"]["name"] }} <span id="lab_status">Unknown</span><span>
+										<button id="recreate_session" type="button" onclick="createSession('open', 2, 2048)">Recreate Session</button>
+									<!-- Last save 3minute ago  -->
+								</span></h4>
+				<!-- <p id="nightmode">Night mode</p> -->
+			
+			</div>
+
+		</div>
+<!-- 
+		<div class="navbar-app float-navbar">
+			<div class="navbar-app__inner">
+				<a href="#" onclick="back()"><i class="fas fa-angle-left"></i></a>
+				<h3>Datalabs </h3>
+			</div>
+		</div> -->
+
+		<div class="button-bar-tool">
+			<!--<p class="error-notif"><i class="fas fa-times"></i> Session not found, try to recreate session</p>-->
+			<!-- <p class="success-notif"><i class="fas fa-check-circle"></i> Creating new Spark session, please wait...</p> -->
+		</div>
+ 
+		<div class="float-side-bar" style="pointer-events: none;">
+			<a id="float-run"><i class="fas fa-play"></i></a>
+			<a id="float-stop"><i class="fas fa-stop"></i></a>
+			<a id="float-save"><i class="far fa-save"></i></a>
+		</div>
+
+
+		<div class="container full-size-container">
+			<div class="main-container">
+				<div class="row">
+					<div class="col-md-3 sticky-post">
+						<div class="card-panel" style="pointer-events: none;">
+							<div class="card-panel--inner">
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2><img src="{{ url_for('static', filename='assets/img/green-input-data.svg') }}"> Input Data</h2>
+									</div>
+									<div class="panel-item--sub" style="display: block">
+										<p id="imprt-db">Import Datasource</p>
+										<p id="imprt-fl">Import File</p>
+										<p id="data-merge">Data Merge</p>
+										<p id="select-col">Select Column</p>
+										<p id="select-row">Select Row</p>
+										<p id="data-query">Custom Script</p>
+										<!-- <p id="bigquery">Big Query</p> -->
+										<p id="hivetable">Save to Hive Table</p>
+										<p id="convert">Data Type Conversion</p>
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2><img src="{{ url_for('static', filename='assets/img/green-preprocess.svg') }}"> Preprocess</h2>
+									</div>
+									<div class="panel-item--sub">
+										<span class="sub-title">Feature Transformer</span>
+										<p id="bucketizer">Bucketizer</p>
+										<p id="normalizer">Normalizer</p>
+										<p id="onehot">OneHotEncoder</p>
+										<p id="pca">PCA</p>
+										<p id="hashingtf">hashingTF</p>
+										<p id="idf">IDF</p>	
+										<p id="countvectorizer">Count Vectorizer</p>
+										<span class="sub-title">Other</span>
+										<p id="minmax">MinMax</p>
+										<p id="missingval">Missing Value</p>
+										<p id="standardscaler">Standard Scaler</p>
+										<p id="stringindexer">String Indexer</p>
+										<p id="labelindexer">Label Indexer</p>
+										<p id="labelconverter">Label Converter</p>										
+										<p id="stopword">StopwordRemover</p>
+										<p id="tokenizer">Tokenizer</p>
+										<p id="vectorassembler">Vector Assembler</p>
+										
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2><img src="{{ url_for('static', filename='assets/img/green-modeling.svg') }}"> Modeling</h2>
+									</div>
+									<div class="panel-item--sub">
+										<span class="sub-title">Forecasting</span>
+										<p id="linearreg">Linear Regression</p>
+										<p id="arima">ARIMA</p>
+										<span class="sub-title">Unsupervised Learning</span>
+										<p id="kmeans">KMeans</p>
+										<p id="gmm">Gaussian Mixture Model</p>
+										<span class="sub-title">Supervised Learning</span>
+										<p id="logisticreg">Logistic Regression</p>
+										<p id="decisiontree">Decision Tree</p>
+										<p id="randomforest">Random Forest</p>
+										<p id="naivebayes">Naive Bayes</p>
+										<p id="linearsvc">Linear SVM</p>
+										<p id="fpgrowth">FP Growth</p>
+										<!-- <span class="sub-title">API Management</span>
+										<p id="saveModel">Save Model</p>
+										<p id="loadModel">Load Model</p>
+										<p id="publishApi">Publish API</p> -->
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2><img src="{{ url_for('static', filename='assets/img/green-visualization.svg') }}"> Visualization</h2>
+									</div>
+									<div class="panel-item--sub">
+										<p id="barchart">BarChart</p>
+										<p id="piechart">PieChart</p>
+										<p id="linechart">lineChart</p>
+										<p id="histogram">Histogram</p>
+										<p id="violin">Violin Plot</p>
+										<p id="scatter">Scatter Plot</p>
+										<p id="prediction">Prediction</p>
+										<p id="wordcloud">Word Cloud</p>
+										<p id="maps">Maps</p>
+										
+										<!-- <p id="decisiontree-visual">Decision Tree</p> -->
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2><img src="{{ url_for('static', filename='assets/img/green-api-management-alt.svg') }}"> API Management</h2>
+									</div>
+									<div class="panel-item--sub">
+										<p id="saveModel">Save Model</p>
+										<!-- <p id="loadModel">Load Model</p> -->
+										<p id="publishApi">Publish API</p>
+									</div>
+								</div>
+								<div class="panel-item">
+									<div class="title-triger">
+										<span class="toggle-indicator"><i class="fas fa-plus"></i></span>
+										<h2><img src="{{ url_for('static', filename='assets/img/green-sigma.svg') }}"> Data Statistic</h2>
+									</div>
+									<div class="panel-item--sub">
+										<p id="correlationanalysis">Correlation Analysis</p>
+										<p id="hypothesistesting">Hypothesis Testing</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="canvas-flow">
+							<div class="canvas-flow--inner">
+								<!-- <div class="canvas-title">
+									<h3>{{ response["result"]["description"]["name"] }}</h3><div id="livy_id"></div>
+									
+									<span><div id="lab_status">Unknown</div>
+									<div id="recreate_session"><button id="recreate_session" type="button" onclick="createSession('open', 2, 2048)">Recreate Session</button></div>last save 32 minute ago</span>
+									
+								</div> -->
+								<div id="canvas-template">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	    <!-- Scripts -->
+	    
+		<script src='{{ url_for("static", filename="assets/js/libs.js") }}'></script>
+	    <script src='{{ url_for("static", filename="assets/js/app.js") }}'></script>
+	    <script src='{{ url_for("static", filename="assets/js/run.js") }}'></script>
+	    <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
+		<script src="https://pagecdn.io/lib/ace/1.4.5/ext-language_tools.js" integrity="sha256-wTJ28YyR8Fw1kZMGFZzHZzg/GL6jvC+Cx0fYFHyeylI=" crossorigin="anonymous"></script>
+		<script src="https://pagecdn.io/lib/ace/1.4.5/mode-python.js" integrity="sha256-MinL4s5SkQg5C0UzG79kKoTJMsTWOjdMX4v+i7bCPVI=" crossorigin="anonymous"></script>
+		
+		<script>
+			history.pushState(null, null, location.href);
+				window.onpopstate = function () {
+					history.go(1);
+				};
+		</script>
+
+		<script>
+			//input 
+            $(document).on('keyup', '.inpt-grp input', function(e) {
+                var thisInput = $(this).val();
+                $(this).attr('value', thisInput)
+            });
+            $(".inpt-grp input").keyup();
+            //
+
+            //select
+            $(document).on('change', '.inpt-grp select', function(e) {
+                $(this).find(':selected').attr('selected', 'selected');
+            });
+            $(".inpt-grp input").change();
+            //
+
+            //checkbox
+            $(document).on('click', '.checkbox-layout-inline input[type=checkbox]', function(e) {
+                if($(this).is(":checked")) {
+                    $(this).attr('checked','checked');
+                }
+            });
+            $(".checkbox-layout-inline input[type=checkbox]").click();
+			
+		</script>
+		
+		<script type="text/javascript">
+			// $("#card-panel").attr("disabled", "disabled");
+			$( document ).ready(function() {
+			    var time = 0;
+			    var intervalId;
+			    intervalId = setInterval(function () {
+       			time = time + 1;
+       			// console.log("time:",time);
+       			if(time === 60){
+       				if(changeTextarea() === "success"){
+       					var file = $('input[type=file]');
+				        var txtarea = $('.txt-area');
+				        file.attr('value', file.val());
+				        txtarea.attr('value', txtarea.val());
+				        var projectFile =  $('#canvas-template').html();
+				        saveProjectFile(projectFile,1);
+				        time = time * 0;
+				        return false;
+       				}
+       			}
+
+        		}, 1000);
+
+			});
+			
+			 $(document).keydown(function (e) {
+                if (e.keyCode == 13 && e.shiftKey){
+                	var cellId = $('.active-column').attr('id');
+                	var runButtonId = $('.active-column').find('.run').attr('id');
+                	var cellClass = $('#'+cellId).find('.function-call').text()
+                	var params = cellClass.split(",");
+					var fnName = params[0];
+					if(params.length === 3){
+						window[fnName](params[1],params[2]);
+					}else{
+						window[fnName](params[1]);
+					}
+					$('#'+runButtonId).nextAll('.output-card').show();
+                	$('#'+runButtonId).nextAll('.stat-progress').slideDown();
+                	activeColumn(params[1], 1);
+                }
+            });
+		  	
+		</script>
+	</body>
+</html>

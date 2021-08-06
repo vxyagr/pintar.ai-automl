@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>pintar.ai | Machine Learning & Big Data Automation</title>
+		<meta name="description" content="Description">
+		<meta name="keywords" content="social content network, social network">
+		<meta name="robots" content="index">
+		<meta name="author" content="Author">
+		<meta name="designer" content="Designer">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	
+		<!-- Facebook -->
+		<meta property="og:title" content="Title">
+		<meta property="og:site_name" content="Site Name">
+		<meta property="og:description" content="Description">
+		<meta property="og:url" content="/_url">
+		<meta property="og:image" content="landing/images/img-to-share.jpg">
+		<meta property="og:type" content="website">
+	
+		<!-- Google+ -->
+		<meta itemprop="name" content="Name">
+		<meta itemprop="description" content="Description">
+		<meta itemprop="image" content="landing/images/img-to-share.jpg">
+	
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Title">
+		<meta name="twitter:description" content="Description">
+		<meta name="twitter:site" content="@twitteraccount">
+		<meta name="twitter:creator" content="@qubicle_id">
+		<meta name="twitter:url" content="/_url">
+		<meta name="twitter:image" content="landing/images/img-to-share.jpg">
+	
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="landing/images/favicons/apple-touch-icon-57x57.png") }}' sizes="57x57">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="landing/images/favicons/apple-touch-icon-60x60.png") }}' sizes="60x60">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="landing/images/favicons/apple-touch-icon-72x72.png") }}' sizes="72x72">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="landing/images/favicons/apple-touch-icon-76x76.png") }}' sizes="76x76">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="landing/images/favicons/apple-touch-icon-114x114.png") }}' sizes="114x114">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="landing/images/favicons/favicon-16x16.png") }}' sizes="16x16">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="landing/images/favicons/favicon-32x32.png") }}' sizes="32x32">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="landing/images/favicons/favicon-96x96.png") }}' sizes="96x96">
+		<link rel="shortcut icon" type="image/ico" href='{{ url_for("static", filename="landing/images/favicons/favicon.ico") }}'>
+		<link rel="manifest" href='{{ url_for("static", filename="landing/images/favicons/manifest.json") }}'>
+		<meta name="theme-color" content="#fafafa">
+	
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Sarabun:400,600,700&display=swap" rel="stylesheet">
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href='{{ url_for("static", filename="landing/css/style.css") }}'>
+	</head>
+	
+	
+	<body oncontextmenu="return false;">
+		<div class="navbars">
+		    <div class="navbars__inner">
+		        <div class="logo">
+		           <img src="{{ url_for('static', filename='landing/images/pintar-log.svg') }}">
+		        </div>
+			<span class="menu-m"><ion-icon name="menu"></ion-icon></span>
+		        <div class="mobile-nav">
+		        	<span class="close-m"><ion-icon name="close"></ion-icon></span>
+		        	<div class="centered-menu">
+		            		<a id="home" href="#">home</a>
+		            		<a id="about" href="#" >about us</a>
+		           		<a id="feature" href="#">features</a>
+		            		<a id="demo" href="https://docs.google.com/forms/d/e/1FAIpQLSc75YEUXtdDQ_uWgfum6_VNHTm_qnMql7-K1ph9p-Z_KNWx_w/viewform"><b>request for demo</b></a>
+		            		<a id="contact" href="#">contact us</a>
+		        	</div>
+		
+		        	<div class="right-menu">
+		            		<a href="/login" class="rounded">login</a>
+		        	</div>
+			</div>
+		    </div>
+		</div>
+
+		<div class="hero-section">
+			<div class="hero-section__inner">
+				<img class="d1 rellax" data-rellax-speed="2" src="{{ url_for('static', filename='landing/images/daun-kiri.svg') }}">
+				<img class="d2 rellax" data-rellax-speed="5" src="{{ url_for('static', filename='landing/images/daun-kanan.svg') }}">
+				<img class="d3 rellax" data-rellax-speed="8" src="{{ url_for('static', filename='landing/images/daun-kanan.svg') }}">
+				<div class="row">
+					<div class="col-md-6 rellax" data-rellax-speed="-4">
+						<h1>accelerate your business with pintar.ai</h1>
+					</div>
+					<div class="col-md-6 rellax" data-rellax-speed="-4">
+						<h4>pintar.ai is a data-driven visually interactive big data analytics interpreter</h4>
+					</div>
+				</div>
+				<div class="ss rellax" data-rellax-speed="2">
+					<img class="mini-icon" src="{{ url_for('static', filename='landing/images/who-we-are.svg') }}">
+						<!-- <img src="{{ url_for('static', filename='landing/images/ss.png') }}"> -->
+				<!--<img src="assets/images/ss.png">-->
+				<!-- <div class="owl-carousel">
+					<div> <img src="{{ url_for('static', filename='landing/images/ss1.png') }}"> </div>
+					<div> <img src="{{ url_for('static', filename='landing/images/ss2.png') }}"> </div>
+					<div> <img src="{{ url_for('static', filename='landing/images/ss3.png') }}"> </div>
+					<div> <img src="{{ url_for('static', filename='landing/images/ss4.png') }}"> </div>
+				  </div> -->
+				  <div class='embed-container'><iframe src='https://www.youtube.com/embed/9pRuqr2b_eA' frameborder='0' allowfullscreen></iframe></div>
+				</div>
+			</div>
+		</div>
+		<div class="overlay-space">
+
+		</div>
+
+
+		<div class="about-section">
+			<div class="about-section__inner">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="{{ url_for('static', filename='landing/images/about.png') }}">
+					</div>
+					<div class="col-md-8">
+						<div class="about-content">
+							<h1>who we are.</h1>
+							<p><b>Pintar.ai is a web-based platform for data analytics modeling with many features that support multiple datasource, customizable data analytics pipeline, and more features.</b><br/><br/>
+
+							Pintar.ai also allows users to analyze data with codeless dashboard and user-friendly interface.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="features">
+			<div class="features__inner">
+				<img class="left-el" src="{{ url_for('static', filename='landing/images/lp-pa-left.png') }}">
+				<img class="right-el" src="{{ url_for('static', filename='landing/images/lp-pa-right.png') }}">
+				<!-- <div class="f-title">
+					<h2>features</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+						Quisque consequat dolor.
+						</p>
+				</div> -->
+				<div class="f-title">
+					<h2>features</h2>
+				</div>
+				<!-- <div class="f-section">
+					<div class="row">
+						<div class="col-md-7">
+							<div class="f-img">
+								<img src="{{ url_for('static', filename='landing/images/dv.svg') }}">
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="f-content">
+								<h2>Visual Data Preprocessing and Modeling</h2>
+								<p>There is no need to do scripting that makes it difficult to prepare data modeling data and visualize data. All parameters can be determined by pitar.ai 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="f-section">
+					<div class="row">
+						<div class="col-md-7">
+							<div class="f-img">
+								<img src="{{ url_for('static', filename='landing/images/ml.svg') }}">
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="f-content">
+								<h2>Visual Data Preprocessing and Modeling</h2>
+								<p>There is no need to do scripting that makes it difficult to prepare data modeling data and visualize data. All parameters can be determined by pitar.ai 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="f-section">
+					<div class="row"> 
+						<div class="col-md-5">
+							<div class="f-content r-algn">
+								<h2>Machine Learning Automation</h2>
+								<p>Machine Learning at your finger tips. While sometimes we found that determine a good machine learning model is a difficult task, we offer an experience that can ease you to choose the best model for your data. 
+								</p>
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="f-img">
+								<img src="{{ url_for('static', filename='landing/images/dv.svg') }}">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="f-section">
+					<div class="row">
+						<div class="col-md-7">
+							<div class="f-img">
+								<img src="{{ url_for('static', filename='landing/images/api.svg') }}">
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="f-content">
+								<h2>Data analytics API Management and Generator</h2>
+								<p>With pintar.ai API Management you can easily expose your model and let you share the power of your model to others. 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-features">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="grid-item">
+								<img src="{{ url_for('static', filename='landing/images/data-source.svg') }}">
+								<h3>Support Multiple Datasource</h3>
+							</div>
+						</div>
+						
+						<div class="col-md-4">
+							<div class="grid-item">
+								<img src="{{ url_for('static', filename='landing/images/pipelines.svg') }}">
+								<h3>Customizable Data Analytics Pipeline</h3>
+							</div>
+						</div>
+
+						
+						<div class="col-md-4">
+							<div class="grid-item">
+								<img src="{{ url_for('static', filename='landing/images/integration.svg') }}">
+								<h3>Integration with bigdata platform</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footers">
+			<div class="footers__inner">
+				<div class="row">
+					<div class="col-md-6">
+						<h1><a name="demo">Conversational AI solution<br/>for smarter life.</a></h1>
+						<h4>Create an intelligent assistant to<br/>
+							serve your customer </h4>
+					</div>
+					<div class="col-md-6">
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSc75YEUXtdDQ_uWgfum6_VNHTm_qnMql7-K1ph9p-Z_KNWx_w/viewform" class="cta-ftr">Request for Demo</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contact-us">
+			<div class="contact-us__inner">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Contact us</h2>
+						<p>Have any Question? We'd love to hear from you.<br/>Here's how to get in touch with us.</p>
+						<h4><ion-icon name="mail"></ion-icon> hello@pintar.ai</h4>
+						<h4><ion-icon name="call"></ion-icon> +62-21-55774695</h4>
+						<br>
+						<h3>Address</h3>
+						<p>Conclave Simatupang, Cilandak Commercial Estate No. 410, Jl. Raya Cilandak KKO, RT 001, RW 005, Kelurahan Cilandak Timur, Kecamatan Pasar Minggu, Jakarta Selatan 12560</p>
+					</div>
+					<div class="col-md-6">
+						<div id='map'></div>
+					</div>
+				</div>
+				<div class="row">					
+					<div class="col-md-6">
+						<a href="https://datasynthesis.io"><img class="img-responsive" src="{{ url_for('static', filename='landing/images/white-colored-01.png') }}"></a>
+					</div>
+					<div class="col-md-6">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="main-ftr">
+			<!-- <img src="assets/images/dst-lg.svg"> -->
+		</div>
+
+	    <!-- Scripts -->
+	    <script src='{{ url_for("static", filename="landing/js/libs.js") }}'></script>
+	    <script src='{{ url_for("static", filename="landing/js/app.js") }}'></script>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+.card-panel {
+    position: relative;
+    background: #fff;
+    &--inner {
+        padding: 30px;
+        .panel-item {
+            margin-bottom: 30px;
+            .sub-title {
+                font-weight: bold;
+                font-family: sarabun;
+                color: #000;
+                letter-spacing: 1px;
+                margin-top: 15px;
+                display: block;
+            }
+            .title-triger {  
+                position: relative;
+            }
+            span.toggle-indicator {
+                position: absolute;
+                right: 0px;
+                font-size: 12px;
+            }
+            h2 {
+                display: block;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                margin-top: 0px;
+            }
+            .panel-item--sub {
+                display: none;
+                padding-left: 15px;
+                p {
+                    margin: 0px;
+                    display: block;
+                    padding: 5px 0px;
+                    cursor: pointer;
+                    opacity: 0.7;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

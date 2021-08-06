@@ -1,0 +1,47 @@
+@charset 'utf-8';
+
+// - - - - - - - - - - - - - - - - - - -
+// - - application.scss
+// contains an import section for base, components, lib, modules, pages
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - modules
+
+// - - global modules - functions, mixins, extends, and utility classes.
+// exp: @import 'modules/modules';
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - base
+@import 'base/base';
+
+// - - project defaults for base elements - h1-h6, p, a, etc.
+// exp: @import 'base/base';
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - libs
+
+// - - variable overrides for 3rd party libraries
+// exp: @import 'libs/library-variable-overrides';
+@import 'libs/font-awesome';
+@import 'libs/_bootstrap.scss';
+
+// - - - - - - - - - - - - - - - - - - -
+// - - components
+@import 'components/card';
+@import 'components/panel';
+@import 'components/canvas';
+@import 'components/transfer';
+@import 'components/iconfonts';
+
+// - - global button styles
+// exp: @import 'components/buttons';
+
+
+// - - - - - - - - - - - - - - - - - - -
+// - - pages
+
+// - - home styles - a unique styles that implemented in a specified pages
+// exp: @import 'pages/home';

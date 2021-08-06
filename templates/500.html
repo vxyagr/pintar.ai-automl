@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>500</title>
+		<meta name="description" content="Description">
+		<meta name="keywords" content="social content network, social network">
+		<meta name="robots" content="index">
+		<meta name="author" content="Author">
+		<meta name="designer" content="Designer">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	
+		<!-- Facebook -->
+		<meta property="og:title" content="Title">
+		<meta property="og:site_name" content="Site Name">
+		<meta property="og:description" content="Description">
+		<meta property="og:url" content="/_url">
+		<meta property="og:image" content="assets/images/img-to-share.jpg">
+		<meta property="og:type" content="website">
+	
+		<!-- Google+ -->
+		<meta itemprop="name" content="Name">
+		<meta itemprop="description" content="Description">
+		<meta itemprop="image" content="assets/images/img-to-share.jpg">
+	
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Title">
+		<meta name="twitter:description" content="Description">
+		<meta name="twitter:site" content="@twitteraccount">
+		<meta name="twitter:creator" content="@qubicle_id">
+		<meta name="twitter:url" content="/_url">
+		<meta name="twitter:image" content="assets/images/img-to-share.jpg">
+	
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assetss/images/favicons/apple-touch-icon-57x57.png") }}' sizes="57x57">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assetss/images/favicons/apple-touch-icon-60x60.png") }}' sizes="60x60">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assetss/images/favicons/apple-touch-icon-72x72.png") }}' sizes="72x72">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assetss/images/favicons/apple-touch-icon-76x76.png") }}' sizes="76x76">
+		<link rel="apple-touch-icon" href='{{ url_for("static", filename="assetss/images/favicons/apple-touch-icon-114x114.png") }}' sizes="114x114">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="assetss/images/favicons/favicon-16x16.png") }}' sizes="16x16">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="assetss/images/favicons/favicon-32x32.png") }}' sizes="32x32">
+		<link rel="icon" type="image/png" href='{{ url_for("static", filename="assetss/images/favicons/favicon-96x96.png") }}' sizes="96x96">
+		<link rel="shortcut icon" type="image/ico" href='{{ url_for("static", filename="assetss/images/favicons/favicon.ico") }}'>
+		<link rel="manifest" href='{{ url_for("static", filename="assetss/images/favicons/manifest.json") }}'>
+		<meta name="theme-color" content="#fafafa">
+	
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Sarabun:400,600,700&display=swap" rel="stylesheet">
+	
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href='{{ url_for("static", filename="assets/css/style.css") }}'>
+	
+		<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sarabun:400,700,800" rel="stylesheet"> -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	
+	</head>
+	
+	
+	<body style="background: #fff !important;">
+
+		<div class="additional-pages">
+            <div class="additional-pages__inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="additional-img" src="{{ url_for('static', filename='assets/img/500.svg') }}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="additional-content">
+                            <h1>Ooops! Internal Server Error</h1>
+                            <p>Please check the .htaccess file on your hosting account and make sure each line is written correctly according to the code standard. <br/>please go back to the homepage.</p>
+                            <a href="/landing">Go Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+	    <!-- Scripts -->
+	    <script src='{{ url_for("static", filename="assetss/js/libs.js") }}'></script>
+	    <script src='{{ url_for("static", filename="assetss/js/app.js") }}'></script>
+	</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+	//=include includes/head.html
+	<body>
+		//=include includes/navigation.html
+		<div class="page-container">
+			<div class="page-container__inner">
+				<div class="row">
+					<div class="col-md-9 sticky-post">
+						<div class="tool-box">
+							<div class="tool-box__inner">
+								<h2 class="title">Project Name</h2>
+								<div class="proc-box" >
+									<div class="proc-box__item" id="sidebar-datasource">
+										<a class="parrent-item">Input data <i class="fas fa-plus-circle"></i></a>
+										<div class="data-select">
+											<div class="row">
+												<div class="col-md-4">
+													<a id="database-input" href="#"><i class="fas fa-database"></i></a>
+												</div>
+												<div class="col-md-4">
+													<a href="#"><i class="fas fa-database"></i></a>
+												</div>
+												<div class="col-md-4">
+													<a href="#"><i class="fas fa-database"></i></a>
+												</div>
+												<div class="col-md-4">
+													<a href="#"><i class="fas fa-database"></i></a>
+												</div>
+												<div class="col-md-4">
+													<a href="#"><i class="fas fa-database"></i></a>
+												</div>
+												<div class="col-md-4">
+													<a href="#"><i class="fas fa-database"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="proc-box__item de-active" id="sidebar-preproc">
+										<a class="parrent-item">Preproccess <i class="fas fa-plus-circle"></i></a>
+									</div>
+									<div class="proc-box__item de-active" id="sidebar-modeling">
+										<a class="parrent-item">modeling <i class="fas fa-plus-circle"></i></a>
+									</div>
+									<div class="proc-box__item de-active" id="sidebar-viz">
+										<a class="bordered-btn parrent-item">Visualization</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-9">
+						<div id="box-input-data" class="card-container">
+							<div class="card-input database-section">
+								<div class="card-input__inner">
+									<div class="card-input-title">
+										<h3>Input data <span>Database</span></h3> 
+									</div>
+									<div class="card-input-body ">
+										
+										<div id="template-datasource">
+											<!--blocked-->
+											<div id="data-template">
+												<div class="block-database">
+													<div class="row">
+														<div class="col-md-2">
+															<div class="database-attr">
+																<p>Database Type</p>
+																<select class="custom-select" name="db" style="width: 100%">
+																	<option value="SQL">SQL</option>
+																	<option value="MYSQL">MYSQL</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="database-attr">
+																<p>Database Name</p>
+																<input type="text" placeholder="database name">
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="database-attr">
+																<p>Database table</p>
+																<input type="text" placeholder="database table">
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="database-attr">
+																<p>Username</p>
+																<input type="text" placeholder="username">
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="database-attr">
+																<p>Password</p>
+																<input type="password" placeholder="password">
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="database-attr">
+																<p>Action</p>
+																<button class="con"><i class="fas fa-plug"></i></button>
+																<button class="del"><i class="far fa-trash-alt"></i></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<!--blocked-->
+										</div>
+
+										<button class="add-datasource">+ Datasource</button>
+										<button class="add-datamerge">Data Merge</button>
+										<button class="add-col-select">Select column</button>
+										<button class="add-row-select">Select row</button>
+										<div class="container-data-set">
+
+										</div>
+
+										<div class="hide" id="hide-temp">
+											<div class="sub-proc" id="data-merge">
+												<span class="rem-btn merge-remove"><i class="far fa-trash-alt"></i></span>
+												<div class="title">
+													<h3>Data Merge</h3>
+												</div>
+												<div class="body-sub">
+													<table id="table_id" class="display">
+														<thead>
+															<tr>
+																<th>Data Name</th>
+																<th style="width: 150px">Action</th>
+																<th style="width: 150px">Target</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Datasource 1</td>
+																<td>
+																	<select class="single-select" name="db" style="width: 100%">
+																		<option value="" selected disabled >Select merge type</option>
+																		<option value="left-join">Left join</option>
+																		<option value="right-join">Right join</option>
+																		<option value="Inner-join">Inner join</option>
+																	</select>
+																</td>
+																<td>
+																	<select class="single-select" name="db" style="width: 100%">
+																		<option value="" selected disabled >Select Target</option>
+																		<option value="db1">Datasource 1</option>
+																		<option value="db2">Datasource 2</option>
+																		<option value="db3">Datasource 3</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<td>Datasource 2</td>
+																<td>
+																	<select class="single-select" name="db" style="width: 100%">
+																		<option value="" selected disabled >Select merge type</option>
+																		<option value="left-join">Left join</option>
+																		<option value="right-join">Right join</option>
+																		<option value="Inner-join">Inner join</option>
+																	</select>
+																</td>
+																<td>
+																	<select class="single-select" name="db" style="width: 100%">
+																		<option value="" selected disabled >Select Target</option>
+																		<option value="db1">Datasource 1</option>
+																		<option value="db2">Datasource 2</option>
+																		<option value="db3">Datasource 3</option>
+																	</select>
+																</td>
+															</tr>
+															<tr>
+																<td>Datasource 3</td>
+																<td>
+																	<select class="single-select" name="db" style="width: 100%">
+																		<option value="" selected disabled >Select merge type</option>
+																		<option value="left-join">Left join</option>
+																		<option value="right-join">Right join</option>
+																		<option value="Inner-join">Inner join</option>
+																	</select>
+																</td>
+																<td>
+																	<select class="single-select" name="db" style="width: 100%">
+																		<option value="" selected disabled >Select Target</option>
+																		<option value="db1">Datasource 1</option>
+																		<option value="db2">Datasource 2</option>
+																		<option value="db3">Datasource 3</option>
+																	</select>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+	
+											<div class="sub-proc" id="col-select">
+												<span class="rem-btn col-remove"><i class="far fa-trash-alt"></i></span>
+												<div class="title">
+													<h3>Select Column</h3>
+												</div>
+												<div class="body-sub">
+													<div class="transfer"></div>
+												</div>
+											</div>
+	
+											<div class="sub-proc" id="row-select">
+												<span class="rem-btn row-remove"><i class="far fa-trash-alt"></i></span>
+												<div class="title">
+													<h3>Select Row</h3>
+												</div>
+												<div class="body-sub">
+													<div id="body-sel-row">
+														<div id="sel-row-container">
+															<div class="sel-row">
+																<input type="text" placeholder="row name">
+																<select class="custom-select" name="db" style="width: 100%">
+																	<option value="" selected disabled >Select condition</option>
+																	<option value="left-join">=</option>
+																	<option value="right-join"><</option>
+																	<option value="Inner-join">></option>
+																</select>
+																<input type="text" placeholder="condition type">
+																<button class="del-row-item"><i class="far fa-trash-alt"></i></button>
+															</div>
+														</div>
+													</div>
+													<button class="add-select-row">+ row</button>
+												</div>
+											</div>
+										</div>
+
+										<!--<button id="add-datasource">Add Datasource</button>-->
+										
+									</div>
+									<div class="card-input-footer">
+										<a class="preview-btn">Preview</a>
+										<a class="post-btn" id="post-datasource">Post Data</a>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="box-pre" class="card-container">
+							<div class="card-input database-section">
+								<div class="card-input__inner">
+									<div class="card-input-title">
+										<h3>Preprocess</span></h3> 
+									</div>
+									<div class="card-input-body  database-select">
+										
+										<div id="template-preprocess">
+											<div class="preprocess-select-input">
+												<select id="select-preprocess" name="state[]" multiple style="width:100%" placeholder="Select Preprocessing type . .">
+													<option value="">Select a Preprocessing type</option>
+													<option value="labeling">Labeling</option>
+													<option value="missingvalue">Missing Value</option>
+													<option value="clustering">Clustering</option>
+													<option value="binning">Binning</option>
+													<option value="generalization">Generalization</option>
+													<option value="hypo">Hypothesis Testing</option>
+													<option value="scaling">Scaling</option>
+												</select>
+											</div>
+											<div class="pre-proc-item" id="module-labeling">
+												<div class="title">
+													<span class="del-item"><i class="fas fa-minus-circle"></i></span>
+													<span>Labeling</span>
+													<span class="slide-btn-card"><i class="fas fa-sort-down"></i></span>
+												</div>
+												<div class="body">
+													<div class="row">
+														<div class="col-md-6" >
+															<div id="input-labeling">
+															</div>
+															<button class="add-cloumn-label">+ Column</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pre-proc-item" id="module-missing-value">
+												<div class="title">
+													<span class="del-item"><i class="fas fa-minus-circle"></i></span>
+													<span>Input missing value</span>
+													<span class="slide-btn-card"><i class="fas fa-sort-down"></i></span>
+												</div>
+												<div class="body">
+													<p>Select Type</p>
+													<select class="single-select" name="db" style="width: 30%">
+														<option value="SQL">SQL</option>
+														<option value="MYSQL">MYSQL</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<!--<button id="add-datasource">Add Datasource</button>-->
+										
+									</div>
+									<div class="card-input-footer">
+										<a class="proc-btn" id="preprocess-action">Preprocess Data</a>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="box-modeling" class="card-container">
+							<div class="card-input database-section">
+								<div class="card-input__inner">
+									<div class="card-input-title">
+										<h3>Modeling</span></h3> 
+									</div>
+									<div class="card-input-body ">
+										<p>Select Type</p>
+										<select class="single-select" name="db" style="width: 30%">
+											<option value="dsctree">decision tree</option>
+											<option value="MYSQL">MYSQL</option>
+										</select>
+									</div>
+									<div class="card-input-footer">
+										<a class="proc-btn" id="modeling-action">Build Data</a>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	    <!-- Scripts -->
+	    <script src="assets/js/libs.js"></script>
+	    <script src="assets/js/app.js"></script>
+	</body>
+</html>

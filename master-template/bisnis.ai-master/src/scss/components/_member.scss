@@ -1,0 +1,324 @@
+.profile-user {
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
+    p {
+        font-size: 14px;
+        color: #ffffff70;
+        font-family: sarabun;
+    }
+    h3 {
+        color: #fff;
+        font-family: sarabun;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+.title-admin {
+    h2 {
+        color: #fff;
+        font-family: sarabun;
+        font-weight: bold;
+        margin: 0px;
+    }
+    h3 {
+        margin: 10px 0px 0px 0px;
+        color: #fff;
+    }
+}
+
+.member-pages {
+    height: 300px;
+    margin-bottom: -250px;
+}
+
+.list-projects {
+    margin-top: 50px;
+    .title-p {
+        h2 {
+            margin: 0px;
+            color: #ffff;
+            font-family: sarabun;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        span {
+            height: 4px;
+            width: 25px;
+            background: #66e07d;
+            display: block;
+            margin-top: 15px;
+            border-radius: 25px;
+        }
+    }
+}
+
+.project-box {
+    margin-top: 15px;
+    .card-project {
+        background: #fff;
+        padding: 25px;
+        height: 200px;
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .desc {
+            font-size: 12px;
+            color: #5f5f5f;
+            margin-top: 18px;
+        }
+        h4 {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0px;
+        }
+        .status {
+            font-weight: 500;
+            margin: 10px 0px 0px;
+            span.active {
+                color: #66e07d;
+            }
+            span.idle {
+                color: #4686c5;
+            }
+            span.inactive {
+                color: #cecece;
+            }
+        }
+        a.btn-open {
+            position: absolute;
+            background: #66e07d;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none !important;
+            transition: all 0.3s;
+            &:hover {
+                background: #0b2239;
+                color: #fff;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.project-nm {
+    input {
+        background: transparent;
+        border: none;
+    }
+    textarea {
+        background: transparent;
+        border: none;
+    }
+    input.project-name {
+        font-size: 28px;
+        color: #fff;
+        font-weight: bold;
+        font-family: sarabun;
+        margin-bottom: 10px;
+    }
+    .project-desc {
+        font-family: sarabun;
+        font-size: 14px;
+        color: #fff;
+        width: 100%;
+        max-width: 600px;
+        min-height: 60px;
+        outline: none !Important;
+    }
+}
+
+.package {
+    .title {
+        color: #fff;
+        font-family: sarabun;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 0px;
+    }
+}
+
+.pckg .benefit {
+    color: #000;
+    font-weight: bold;
+    margin: 0px 0px 10px;
+}
+.pckg {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    img {
+        width: 100%;
+        max-width: 86px;
+        margin-bottom: 30px;
+    }
+    span.cover-pckg {
+        position: absolute;
+        background: #eaf0f7;
+        width: 100%;
+        height: 102px;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    a {
+        background: #0b2239;
+        color: #fff;
+        display: block;
+        padding: 10px;
+        margin-top: 30px;
+        font-weight: bold;
+        text-decoration: none !Important;
+    }
+    
+    h4 {
+        font-family: sarabun;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #000;
+        margin: 0px;
+        position: relative;
+        z-index: 1;
+    }
+    h2 {
+        font-family: sarabun;
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #0b2239;
+        margin: 0px 0px 15px;
+        position: relative;
+        z-index: 1;
+    }
+    p {
+        font-size: 14px;
+        color: #b1b1b1;
+        margin-bottom: 30px;
+    }
+    .benefit {
+        color: #1b1b1b;
+        font-weight: bold;
+        margin: 0px 0px 10px;
+        text-align: center;
+    }
+    span {
+        display: block;
+        font-size: 42px;
+        font-weight: bold;
+        font-family: sarabun;
+        color: #1cbf3b;
+    }
+}
+
+.package-item {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+
+.new-project-form {
+    .input-grp {
+        margin-bottom: 15px;
+        label {
+            font-weight: bold;
+            font-family: sarabun;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 10px 15px;
+            font-family: sarabun;
+            font-size: 14px;
+            width: 100%;
+            border: none;
+            background: #f7f7f7;
+            border-radius: 5px;
+        }
+        textarea {
+            padding: 10px 15px;
+            font-family: sarabun;
+            font-size: 14px;
+            width: 100%;
+            border: none;
+            background: #f7f7f7;
+            border-radius: 5px;
+        }
+    }
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-header {
+    padding: 30px 30px 0px;
+    border: none;
+    h4.modal-title {
+        font-weight: bold;
+        font-family: sarabun;
+        font-size: 22px !important;
+        color: #0b2239;
+    }
+}
+
+.modal-footer {
+    padding: 0px 30px 30px;
+    border: none;
+    button.btn.btn-success {
+        border: none !important;
+        font-family: sarabun;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+.modal-content {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+.usage-total {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-family: sarabun;
+    width: 100%;
+    max-width: 298px;
+    .usage {
+        h1 {
+            font-weight: bold;
+            font-size: 23px;
+            margin: 0px;
+            span {
+                color: #66e07d;
+            }
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0px;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+}

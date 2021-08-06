@@ -1,0 +1,46 @@
+.navbar-bisnis {
+    border: none;
+    background: #0b2239;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 0px !important;
+    .navbar-brand {
+        color: #fff;
+        font-weight: 900;
+        font-size: 20px;
+        span {
+            font-weight: 300;
+            color: #66E07D;
+        }
+    }
+    .nav {
+        li {
+            a {
+                position: relative;
+                display: block;
+                padding: 5px 20px;
+                color: #fffefe;
+                background: transparent;
+                font-size: 13px;
+                border-radius: 26px;
+                margin-top: 10px;
+            }
+            .btn-mode {
+                border: solid 1px #66E07D;
+                color: #66E07D ;
+                transition: all 0.3s;
+                &:hover {
+                    background: #66E07D;
+                    color: #fff; 
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}
+
+
+.container-fluid {
+    width: 100%;
+    max-width: 1182px;
+}
